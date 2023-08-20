@@ -1,0 +1,46 @@
+header .navbar, .container-fluid, .navbar-nav{
+    gap: 20px;
+    background-color: #bebbba;
+    color: #17120d;
+    padding: 0;
+}
+
+header .navbar-brand{
+    font-size: 1.8rem;
+    font-family: 'Roboto Mono';
+    color: #17120d;
+    font-weight: 500;
+}
+
+header .navbar .login{
+    display: flex;
+    justify-content: center;
+    margin-left: 250px;
+}
+
+.nav-item .nav-link, .login a{
+    color: #17120d;
+    padding: 5px;
+}
+
+.nav-item .nav-link:hover, .login a:hover {
+    color: #685850;
+}
+
+header .navbar span{
+    cursor: pointer;
+}
+
+header .collapse{
+    text-decoration: none;
+}
+
+header #inputSearch{
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #000;
+    display: none;
+    transition: opacity 2s;
+}
