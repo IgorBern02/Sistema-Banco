@@ -6,6 +6,7 @@
     <title>Ecommerce</title>
     <link rel="stylesheet" href="./style/global.css" />
     <link rel="stylesheet" href="./style/header.css" />
+    <link rel="stylesheet" href="./style/main.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
@@ -25,7 +26,7 @@
     ></script>
   </head>
   <body>
-    <div class="bg">
+
       <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
@@ -49,21 +50,33 @@
                 </li>
               </ul>
             </div>
+
             <nav class="navbar collapse navbar-collapse login">
               <a class="navbar-nav nav-link" href="#">Login</a>
-              <span class="material-icons" id="searchImg">search</span>
-              <input
-                id="inputSearch"
-                inputtype="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
+              <div class="search">
+                <span class="material-icons" id="searchImg">search</span>
+                <input
+                  id="inputSearch"
+                  inputtype="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+              </div>
               <span class="material-icons">local_mall</span>
             </nav>
           </div>
         </nav>
       </header>
-    </div>
+
+     
+        <div class="container">
+          <div class="products">
+          </div>
+
+        </div>
+
+  
+    
 
     <script src="./script/script.js"></script>
   </body>
@@ -71,3 +84,5 @@
 
 <!-- class="form-control" -->
 <!-- id="inputSearch" -->
+<!-- class="visuallyhidden hidden"
+                id="inputSearch" -->

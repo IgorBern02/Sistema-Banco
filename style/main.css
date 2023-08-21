@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.container{
+    max-width: 144rem;
+    padding: 0 2rem;
+    margin: 0;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+}
+
+.product{
+    background: #f9f8fc;
+    padding: 0 0 2rem 0;
+}
+
+.product img{
+    width: 100%;
+}
+
+.product .product-title{
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+.product-title,
+.product-price-container,
+.product-description{
+    padding: 0.5rem 2rem;
+}
+
+.product-price-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

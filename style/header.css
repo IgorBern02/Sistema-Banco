@@ -1,14 +1,17 @@
 header .navbar, .container-fluid, .navbar-nav{
     gap: 20px;
-    background-color: #bebbba;
-    color: #17120d;
+    color: #0c3b2e;
+    height: 70px;
+    background-color: #fff;
     padding: 0;
+    display: flex;
+    align-items: center;
 }
 
 header .navbar-brand{
     font-size: 1.8rem;
     font-family: 'Roboto Mono';
-    color: #17120d;
+    color: #0c3b2e;
     font-weight: 500;
 }
 
@@ -19,16 +22,27 @@ header .navbar .login{
 }
 
 .nav-item .nav-link, .login a{
-    color: #17120d;
+    color: #0c3b2e;
     padding: 5px;
 }
 
-.nav-item .nav-link:hover, .login a:hover {
-    color: #685850;
+.container-fluid a:hover {
+    color: #6d9773;
 }
 
-header .navbar span{
+header .search{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+header .search #searchImg{
     cursor: pointer;
+    background-color: #6d9773;
+    padding: 6px;
+    position: absolute;
+    right: 0%;
+    border-radius: 0 5px 5px 0;
 }
 
 header .collapse{
@@ -41,6 +55,4 @@ header #inputSearch{
     border-radius: 5px;
     outline: none;
     border: 1px solid #000;
-    display: none;
-    transition: opacity 2s;
 }
