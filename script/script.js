@@ -17,18 +17,23 @@
 //         }
 // });
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
   let products = document.querySelector(".products");
   async function fetchProducts(url) {
-    let data = await fetch(url);
-    let response = await data.json();
+    try {
+      let data = await fetch(url);
+      let response = await data.json();
 
-    for (let i = 0; i < response.length; i++) {
-      let description = response[i].description;
-      let title = response[i].title;
-      products.innerHTML += ` 
+      for (let i = 0; i < response.length; i++) {
+        let description = response[i].description;
+        let title = response[i].title;
+        products.innerHTML += ` 
         <div class="product">
-          <img src="${response[i].images[1]}" class="product-img" alt="..." />
+          <img src="${response[i].images[1]}" class="product-img" alt="${
+          response[i].category.name
+        }" />
             
                 <h5 class="product-title">${
                   title.length > 18
@@ -42,14 +47,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 }</p>
                 <div class="product-price-container">
                 <h3 class="product-price">${response[i].price}</h3>
-                <a href="#" data-productId="${
-                  response[i].id
-                }" class="add-to-cart"></a>
+                <a href="#" data-productId="${response[i].id}" 
+                class="btn btn-outline-success">Add To Cart</a>
                 </div>
-            
         </div>
         `;
+      }
+    } catch (err) {
+      console.log(err);
     }
   }
-  fetchProducts("https://api.escuelajs.co/api/v1/products");
+  fetchProducts("https://api.escuelajs.co/api/v1/products?offset=0&limit=32");
 });

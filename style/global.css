@@ -6,4 +6,11 @@
     box-sizing: border-box;
 }
 
-
+body .bg{
+    /* background-image: url(../images/pexels-stephan-seeber-1054218.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: auto;
+    width: 100%; */
+    background-color: #6d9773;
+}
