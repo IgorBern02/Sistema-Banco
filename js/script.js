@@ -1,4 +1,8 @@
-let saldoValor = 0;
+let saldoValor = saldoDaContaAleatorio(100, 5000);
+
+function saldoDaContaAleatorio(a, b){
+    return Math.floor(Math.random() * (b - a + 1)) + a;
+}
 
 function saldo() {
     const saldoElement = document.getElementById('saldo');
@@ -20,6 +24,7 @@ function sacar() {
     saldoValor -= saque;
     saldo();
     alert(`Saque de R$ ${saque.toFixed(2)} realizado com sucesso.`);
+    saque = document.getElementById('saque').value= '';
 }
 
 function depositar() {
@@ -32,6 +37,7 @@ function depositar() {
     saldoValor += deposito;
     saldo();
     alert(`Depósito de R$ ${deposito.toFixed(2)} realizado com sucesso.`);
+    deposito = document.getElementById('deposito').value = '';
 }
 
 saldo();
