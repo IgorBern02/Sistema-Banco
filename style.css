@@ -1,7 +1,21 @@
+:root{
+    --primary-color: #FE6A10;
+    --secondary-color: #004895;
+    --thirt-color: #FCE808;
+    --white-color: #fff;
+}
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 100vh;
 }
 
 .container{
@@ -9,14 +23,21 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 40%;
+    height: 70%;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    color: var(--white-color);
 }
 
-.container input, button{
-    padding: 10px;
-    font-size: 20px;
+h1{
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    border: 1px solid #FCE808;
 }

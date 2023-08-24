@@ -1,30 +1,37 @@
-const saldo = document.getElementById('saldo');
-const deposito = document.getElementById('deposito');
-const saque = document.getElementById('saque');
-const valor = document.getElementById('valor');
-const mensagem = document.getElementById('mensagem');
+let saldoValor = 0;
 
-
-
-function consultarSaldo(saldo) {
-    mensagem.innerHTML = (`Seu saldo atual é de R$${saldo}`);
+function saldo() {
+    const saldoElement = document.getElementById('saldo');
+    saldoElement.textContent = `R$ ${saldoValor.toFixed(2)}`;
 }
 
-function realizarDeposito(saldo, deposito) {
-    saldo += deposito;
-    mensagem.innerHTML = ('Deposito realizado com sucesso!');
-    return saldo;
-}
-
-function realizarSaque(saldo, saque) {
-    saque = saque;
-
-    if (saque > saldo) {
-        mensagem.innerHTML = ('Não é possível realizar o saque');
-        return saldo;
+function sacar() {
+    const saque = parseFloat(document.getElementById('saque').value);
+    if (isNaN(saque) || saque <= 0) {
+        alert('Digite um valor válido para o saque.');
+        return;
     }
 
-    saldo -= saque;
-    mensagem.innerHTML = ('Saque realizado com sucesso!');
-    return saldo;
+    if (saque > saldoValor) {
+        alert('Saldo insuficiente para o saque.');
+        return;
+    }
+
+    saldoValor -= saque;
+    saldo();
+    alert(`Saque de R$ ${saque.toFixed(2)} realizado com sucesso.`);
 }
+
+function depositar() {
+    const deposito = parseFloat(document.getElementById('deposito').value);
+    if (isNaN(deposito) || deposito <= 0) {
+        alert('Digite um valor válido para o depósito.');
+        return;
+    }
+
+    saldoValor += deposito;
+    saldo();
+    alert(`Depósito de R$ ${deposito.toFixed(2)} realizado com sucesso.`);
+}
+
+saldo();

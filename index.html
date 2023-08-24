@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Sistema Banco </title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema Banco</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
     <div class="container">
-        <input type="number" name="saldo" id="saldo">
+        <h1>Sistema de Saques e Depósitos</h1>
 
-        <input type="number" name="valor" id="valor">
-        <button type="submit" id="deposito"  onclick="realizarDeposito()">Depositar</button>
-        <button type="submit" id="consultarSaldo"  onclick="consultarSaldo()">Consultar Saldo</button>
-        <button type="submit" id="sacar" onclick="realizarSaque()">Sacar</button>
-        
+      <h2>Sistema de Saques e Depósitos</h2>
 
-        <div id="mensagem"></div>
+      <label for="saldo">Saldo:</label>
+      <span id="saldo">R$ 0.00</span>
+
+      <h2>Realizar Saque</h2>
+      <input type="number" id="saque" placeholder="Valor do saque" />
+      <button onclick="sacar()">Sacar</button>
+
+      <h2>Realizar Depósito</h2>
+      <input type="number" id="deposito" placeholder="Valor do depósito" />
+      <button onclick="depositar()">Depositar</button>
     </div>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
