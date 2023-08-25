@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sistema Banco</title>
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -34,139 +38,6 @@
     </div>
 
     <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 </html>
-
-
-@import "./_variables";
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  width: 100%;
-  height: 100vh;
-}
-
-.container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30%;
-  height: 70%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  background-color: $thirtColsor;
-  backdrop-filter: blur(15px);
-  border-radius: 10px;
-  color: $whiteColor;
-  overflow: hidden;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-h1 {
-  font-size: 2.3rem;
-  font-weight: 600;
-}
-
-.saldo {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  span {
-    font-size: 1.7rem;
-    font-weight: 100;
-  }
-
-  label {
-    font-size: 1.5rem;
-    font-weight: 100;
-  }
-}
-
-.saque,
-.deposito {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  h2 {
-    font-size: 1.2rem;
-    font-weight: 100;
-    margin-bottom: 10px;
-  }
-}
-
-.inputs {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
-
-  input {
-    width: 60%;
-    padding: 10px;
-    font-size: 1rem;
-    outline: none;
-    border: none;
-  }
-
-  a {
-    display: block;
-    padding: 9px;
-    width: 22%;
-    font-size: 15px;
-    text-decoration: none;
-    color: $thirtColor;
-    border: 1px solid $thirtColor;
-    text-align: center;
-    position: relative;
-    transition: all 0.35s;
-
-    span {
-      position: relative;
-      z-index: 2;
-    }
-
-    &:after {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 100%;
-      background: $primaryColor;
-      transition: all 0.35s;
-    }
-
-    &:hover {
-      color: $blackColor;
-    }
-
-    &:hover:after {
-      width: 100%;
-    }
-  }
-}
-
-$primaryColor: rgb(16, 255, 235);
-$secondaryColor: #D94DB5;
-$thirtColor: rgba(225, 225, 225, 0.1);
-$whiteColor: #fff;
-$blackColor: #000;
-$bgPrimaryColor: #0D041E;
-$bgSecondaryColor: #875C95;

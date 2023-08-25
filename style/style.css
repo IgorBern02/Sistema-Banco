@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(180deg, #05021f, #270f43);
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 70%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(34, 26, 73, 0.2);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border-radius: 10px;
+  color: #da4fc4;
+  overflow: hidden;
+  font-family: "Poppins";
+  box-shadow: 0px 0px 140px 0px #da4fc4;
+}
+
+h1 {
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+
+.saldo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.saldo span {
+  font-size: 1.8rem;
+  font-weight: 100;
+  color: #fff;
+}
+.saldo label {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.saque,
+.deposito {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.saque h2,
+.deposito h2 {
+  font-size: 1.2rem;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+.inputs input {
+  width: 60%;
+  padding: 12px;
+  font-size: 1.1rem;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: #262057;
+  color: #fff;
+}
+.inputs input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.inputs input[type=number] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
+}
+.inputs a {
+  display: block;
+  padding: 9px;
+  width: 25%;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  background-color: #262057;
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+}
+.inputs a span {
+  position: relative;
+  z-index: 2;
+}
+.inputs a:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-image: linear-gradient(90deg, #dc3fca, #fb71ab);
+  border-radius: 10px;
+  transition: all 0.25s;
+}
+.inputs a:hover {
+  color: #fff;
+}
+.inputs a:hover:after {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

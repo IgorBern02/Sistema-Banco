@@ -12,31 +12,56 @@ function saldo() {
 function sacar() {
     const saque = parseFloat(document.getElementById('saque').value);
     if (isNaN(saque) || saque <= 0) {
-        alert('Digite um valor válido para o saque.');
+        swal({
+            title: "Inválido",
+            text: "Digite um valor válido para o saque.",
+            icon: "error",
+            button: "Tentar Novamente",
+          });
         return;
     }
 
     if (saque > saldoValor) {
-        alert('Saldo insuficiente para o saque.');
+        swal({
+            title: "Inválido",
+            text: "Saldo insuficiente para o saque.",
+            icon: "error",
+            button: "Tentar Novamente",
+          });
         return;
     }
 
     saldoValor -= saque;
     saldo();
-    alert(`Saque de R$ ${saque.toFixed(2)} realizado com sucesso.`);
+    swal({
+        title: "Sucesso",
+        text: `Saque de R$ ${saque.toFixed(2)} realizado com sucesso.`,
+        icon: "success",
+        button: "Concluir",
+      });
     saque = document.getElementById('saque').value= '';
 }
 
 function depositar() {
     const deposito = parseFloat(document.getElementById('deposito').value);
     if (isNaN(deposito) || deposito <= 0) {
-        alert('Digite um valor válido para o depósito.');
+        swal({
+            title: "Inválido",
+            text: 'Digite um valor válido para o depósito.',
+            icon: "error",
+            button: "Tentar Novamente",
+          });
         return;
     }
 
     saldoValor += deposito;
     saldo();
-    alert(`Depósito de R$ ${deposito.toFixed(2)} realizado com sucesso.`);
+    swal({
+        title: "Sucesso",
+        text: `Depósito de R$ ${deposito.toFixed(2)} realizado com sucesso.`,
+        icon: "success",
+        button: "Concluir",
+      });
     deposito = document.getElementById('deposito').value = '';
 }
 
