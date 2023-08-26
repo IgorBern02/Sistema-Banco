@@ -4,8 +4,8 @@ $bgForm: #222;
 $whiteColor: #fff;
 $blackColor: #000;
 $bg: #23242a;
-$linearGradientOne: #91DBA5;
-$linearGradientTwo: #063A51;
+$linearGradientOne: #350F50;
+$linearGradientTwo: #DE003F;
 
 * {
   margin: 0;
@@ -45,6 +45,26 @@ body {
     z-index: 1;
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
+    
+
+    @media screen and (max-width: 480px){
+      display: none;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 768px){
+      width: 640px;
+      height: 700px;
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1024px){
+      width: 640px;
+      height: 700px;
+    }
+
+    @media screen and (min-width: 1025px) and (max-width: 1200px){
+      width: 640px;
+      height: 700px;
+    }
   } 
 
   &::after{
@@ -59,6 +79,26 @@ body {
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
     animation-delay: -3s;
+    
+
+    @media screen and (max-width: 480px){
+      display: none;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 768px){
+      width: 640px;
+      height: 700px;
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1024px){
+      width: 640px;
+      height: 700px;
+    }
+
+    @media screen and (min-width: 1025px) and (max-width: 1200px){
+      width: 640px;
+      height: 700px;
+    }
   } 
 
   @keyframes animate {
@@ -100,6 +140,10 @@ body {
   top: 0;
   inset: 0;
 
+  @media screen and (max-width: 480px){
+    display: none;
+  }
+
   &::before{
     content: '';
     position: absolute;
@@ -112,6 +156,22 @@ body {
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
     animation-delay: -1.5s;
+    
+
+    @media screen and (min-width: 481px) and (max-width: 768px){
+      width: 640px;
+      height: 700px;
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1024px){
+      width: 640px;
+      height: 700px;
+    }
+
+    @media screen and (min-width: 1025px) and (max-width: 1200px){
+      width: 640px;
+      height: 700px;
+    }
   } 
 
   &::after{
@@ -126,6 +186,22 @@ body {
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
     animation-delay: -4.5s;
+
+
+    @media screen and (min-width: 481px) and (max-width: 768px){
+      width: 640px;
+      height: 700px;
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1024px){
+      width: 640px;
+      height: 700px;
+    }
+    
+    @media screen and (min-width: 1025px) and (max-width: 1200px){
+      width: 640px;
+      height: 700px;
+    }
   } 
 }
 
@@ -146,15 +222,12 @@ h1 {
   font-weight: 600;
 
   @media screen and (max-width: 480px){
-    font-size: 2.6rem;
+    font-size: 2.3rem;
   }
 
-  @media screen and (min-width: 481px) and (max-width: 768px){
-    font-size: 2.8rem;
-  }
 
   @media screen and (min-width: 769px) and (max-width: 1024px){
-    font-size: 2.8rem;
+    font-size: 3.2rem;
   }
 
   @media screen and (min-width: 1025px) and (max-width: 1200px){
@@ -178,12 +251,8 @@ h1 {
       font-size: 2.5rem;
     }
 
-    @media screen and (min-width: 481px) and (max-width: 768px){
-      font-size: 2.5rem;
-    }
-
     @media screen and (min-width: 769px) and (max-width: 1024px){
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
 
     @media screen and (min-width: 1025px) and (max-width: 1200px){
@@ -200,6 +269,10 @@ h1 {
       font-size: 1.8rem;
     }
 
+    @media screen and (min-width: 769px) and (max-width: 1024px){
+      font-size: 2rem;
+    }
+
     @media screen and (min-width: 1025px) and (max-width: 1200px){
       font-size: 1.8rem;
     }
@@ -213,6 +286,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
 
   h2 {
     font-size: 1.2rem;
@@ -221,6 +295,14 @@ h1 {
 
     @media screen and (max-width: 480px){
       font-size: 1.6rem;
+    }
+
+    // @media screen and (min-width: 481px) and (max-width: 768px){
+    //   font-size: 2.5rem;
+    // }
+
+    @media screen and (min-width: 769px) and (max-width: 1024px){
+      font-size: 2rem;
     }
 
     @media screen and (min-width: 1025px) and (max-width: 1200px){
@@ -258,10 +340,17 @@ h1 {
     @media screen and (max-width: 480px){
       padding: 9px;
       font-size: 1.3rem;
+      width: 70%;
     }
 
-    @media screen and (max-width: 480px){
-      width: 70%;
+    // @media screen and (min-width: 481px) and (max-width: 768px){
+    //   font-size: 1.8rem;
+    //   padding: 10px;
+    // }
+
+    @media screen and (min-width: 769px) and (max-width: 1024px){
+      font-size: 1.5rem;
+      padding: 14px;
     }
 
     @media screen and (min-width: 1025px) and (max-width: 1200px){
@@ -297,19 +386,30 @@ h1 {
     }
 
     @media screen and (min-width: 481px) and (max-width: 768px){
-      width: 60%;
+      width: 60%; 
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1024px){
+      font-size: 1.8rem;
+      padding: 10px;
     }
 
     @media screen and (min-width: 1025px) and (max-width: 1200px){
-      padding: 18px;
+      padding: 14px;
+      font-size: 1.8rem;
     }
 
     span {
       position: relative;
       z-index: 2;
 
+      @media screen and (min-width: 769px) and (max-width: 1024px){
+        font-size: 1.5rem;
+        padding: 10px;
+      }
+
       @media screen and (min-width: 1025px) and (max-width: 1200px){
-        font-size: 1.2rem;
+        font-size: 1.5rem;
       }
     }
 
