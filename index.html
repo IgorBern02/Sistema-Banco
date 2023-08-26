@@ -13,28 +13,35 @@
 
   <body>
     <div class="container">
-      <h1>Sistema de Saques e Depósitos</h1>
+      <span class="bordalinha"></span>
+      <form>
+        <h1>Sistema de Saques e Depósitos</h1>
 
-      <div class="saldo">
-        <label for="saldo">Saldo:</label>
-        <span id="saldo">R$ 0.00</span>
-      </div>
-
-      <div class="saque">
-        <h2>Realizar Saque</h2>
-        <div class="inputs">
-          <input type="number" id="saque" placeholder="Valor do saque" />
-          <a href="#" onclick="sacar()"><span>Sacar</span></a>
+        <div class="saldo">
+          <label for="saldo">Saldo:</label>
+          <span id="saldo">R$ 0.00</span>
         </div>
-      </div>
 
-      <div class="deposito">
-        <h2>Realizar Depósito</h2>
-        <div class="inputs">
-          <input type="number" id="deposito" placeholder="Valor do depósito" />
-          <a href="#" onclick="depositar()"><span>Depositar</span></a>
+        <div class="saque">
+          <h2>Realizar Saque</h2>
+          <div class="inputs">
+            <input type="number" id="saque" placeholder="Valor do saque" />
+            <a href="#" onclick="sacar()"><span>Sacar</span></a>
+          </div>
         </div>
-      </div>
+
+        <div class="deposito">
+          <h2>Realizar Depósito</h2>
+          <div class="inputs">
+            <input
+              type="number"
+              id="deposito"
+              placeholder="Valor do depósito"
+            />
+            <a href="#" onclick="depositar()"><span>Depositar</span></a>
+          </div>
+        </div>
+      </form>
     </div>
 
     <script src="./js/script.js"></script>

@@ -1,46 +1,74 @@
-$primaryColor: #da4fc4;
-$bgInput: #262057;
+$primaryColor: #F54D64;
+$bgContainer: #1c1c1c;
+$bgForm: #222;
 $whiteColor: #fff;
-$bgLinearPrimary: #05021f;
-$bgLinearSecundary: #270f43;
-$bgImgPrimary: #dc3fca;
-$gbImgSecundary: #fb71ab;
+$blackColor: #000;
+$bg: #23242a;
+$linearGradientOne: #91DBA5;
+$linearGradientTwo: #063A51;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins";
 }
 
 body {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(
-    180deg,
-    $bgLinearPrimary,
-    $bgLinearSecundary
-  );
+  background: $bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30%;
-  height: 70%;
+  position: relative;
+  width: 380px;
+  height: 440px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  background-color: rgba(34, 26, 73, 0.2);
-  backdrop-filter: blur(15px);
+  background: $bgContainer;
   border-radius: 10px;
-  color: $primaryColor;
+  color: $whiteColor;
   overflow: hidden;
-  font-family: "Poppins";
-  box-shadow: 0px 0px 140px 0px $primaryColor;
+  
+
+  &::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 440px;
+    background: linear-gradient(0deg, transparent, transparent, $linearGradientOne, $linearGradientOne, $linearGradientOne);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+  } 
+
+  &::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 440px;
+    background: linear-gradient(0deg, transparent, transparent, $linearGradientOne, $linearGradientOne, $linearGradientOne);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+  } 
+
+  @keyframes animate {
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
 
   @media screen and (max-width: 480px){
     width: 100%;
@@ -65,6 +93,52 @@ body {
     height: 80%;
   }
 
+}
+
+.bordalinha{
+  position: absolute;
+  top: 0;
+  inset: 0;
+
+  &::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 440px;
+    background: linear-gradient(0deg, transparent, transparent, $linearGradientTwo, $linearGradientTwo, $linearGradientTwo);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+  } 
+
+  &::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 440px;
+    background: linear-gradient(0deg, transparent, transparent, $linearGradientTwo, $linearGradientTwo, $linearGradientTwo);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+  } 
+}
+
+form{
+  inset: 4px;
+  position: absolute;
+  background: $bgForm;
+  border-radius: 10px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 h1 {
@@ -173,17 +247,17 @@ h1 {
 
   input {
     width: 60%;
-    padding: 12px;
+    padding: 10px;
     font-size: 1.1rem;
     outline: none;
     border: none;
     border-radius: 10px;
-    background-color: $bgInput;
-    color: $whiteColor;
+    background-color: $whiteColor;
+    color: $blackColor;
 
     @media screen and (max-width: 480px){
-      padding: 18px;
-      font-size: 1.5rem;
+      padding: 9px;
+      font-size: 1.3rem;
     }
 
     @media screen and (max-width: 480px){
@@ -206,14 +280,14 @@ h1 {
 
   a {
     display: block;
-    padding: 9px;
+    padding: 10px;
     width: 25%;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-decoration: none;
-    color: $whiteColor;
+    color: $blackColor;
     border: none;
     border-radius: 10px;
-    background-color: $bgInput;
+    background-color: $whiteColor;
     text-align: center;
     position: relative;
     transition: all 0.35s;
@@ -246,7 +320,7 @@ h1 {
       left: 0;
       width: 0;
       height: 100%;
-      background-image: linear-gradient(90deg, $bgImgPrimary, $gbImgSecundary);
+      background-image: linear-gradient(90deg, $linearGradientOne, $linearGradientTwo);
       border-radius: 10px;
       transition: all 0.25s;
     }
